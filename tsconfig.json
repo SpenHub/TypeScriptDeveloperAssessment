@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "noEmit": true,
+    "target": "ES5"
+  },
+  "types": ["node"],
+  "include": ["src/**/*.ts"]
+}
