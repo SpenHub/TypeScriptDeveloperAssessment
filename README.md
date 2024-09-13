@@ -131,6 +131,6 @@ You'll notice a skipped test, that was from an attempt to trigger the supposed c
 ### Exercise 2
 
 - This was pretty straight-forward, I initially had the logic do an "odd-check" via `number % 2 === 1` only to forget about negative numbers. I ended up flipping the logic to check for a lack of equality against `0` instead.
-- My unit tests should cover most cases that can appear with such a function, including bigINT values, zero-length arrays, negative numberes.
-- I ran into a bit of a snag with decimal numbers not acting how I want them to, forgetting that a %2 on a decimal just returns the decimal, so I had to split up the number and only mod the decimal (in the tenths / hundredths... place). It was messy but it works.
+- My unit tests should cover most cases that can appear with such a function, including bigINT values, zero-length arrays, negative numbers.
+- I ran into a bit of a snag with decimal numbers not acting how I want them to, forgetting that a `%2` on a decimal just returns the decimal, so I had to split up the number and only mod the decimal (in the tenths / hundredths... place). It was messy but it works.
 - Future tests that could be included but are more testing the number system of TS/ JS are around floating point precision and how it falls off, from the mantissa just not being big enough after a certain point.
