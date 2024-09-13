@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "Technical assessment for TypeScript developers at LCM.",
   "scripts": {
-    "cypress:open": "cypress open",
+    "cypress:open": "cypress open --e2e --browser chrome",
     "format": "prettier --write",
     "format:all": "npm run format -- \"**/*.{js,json,md,mdx,ts,tsx,scss,yaml,yml}\"",
     "test": "jest"
   },
   "devDependencies": {
+    "@faker-js/faker": "^9.0.0",
     "@testing-library/cypress": "^10.0.1",
     "@types/jest": "^29.5.10",
     "@types/node": "^20.10.3",
