@@ -45,7 +45,7 @@ code to it! We want your help to add some tests to help us automate some basic
 quality control.
 
 The form on https://lastcallmedia.com/contact sometimes allows users to
-submit without filling out the CAPTCHA. We would like to verify that the form 
+submit without filling out the CAPTCHA. We would like to verify that the form
 **cannot** be submitted without solving the CAPTCHA (note: no need to actually
 perform a successful submission here).
 
