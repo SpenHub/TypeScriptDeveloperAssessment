@@ -107,7 +107,7 @@ Before I began I added:
 3. An `.nvmrc` file to explicitly lock version control
 4. Eslint to provide some code-consistency and some guard-rails for my test-writing
 5. A `.prettierrc` file so that my editor (VS Code) could do some auto-formatting that doesn't conflict with eslint's wants & needs
-6. Modified the `cypress.config.ts` to include a baseUrl so that testing only requires a `beforeEach()` referencing `cy.visit('')`
+6. Modified the `cypress.config.ts` to include a baseUrl so that testing only requires a `beforeEach()` referencing `cy.visit('/')`
 7. I altered the Cypress open command to default to e2e and chrome to save some clicks.
 
 ### Exercise 1
