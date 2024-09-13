@@ -1,5 +1,8 @@
 # TypeScript Developer Technical Assessment
 
+# PLEASE SEE MY NOTES AT THE BOTTOM 🫡
+[🚨👉Jump to it right here 👈🚨](#thoughts-feedback)
+
 These exercises are designed to assess your technical skills and see how you
 solve problems.
 
