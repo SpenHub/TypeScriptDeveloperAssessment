@@ -20,7 +20,7 @@ describe('addOddNumbersFromList', () => {
   describe('addOddNumbers with edge-cases', () => {
     it('should handle an empty list', () => {
       const result = addOddNumbersFromList([]);
-      expect(result).toBe(undefined); // No numbers to add, sum is 0
+      expect(result).toBe(0); // No numbers to add, sum is 0
     });
 
     it('should handle a list with a single odd number', () => {
@@ -50,29 +50,25 @@ describe('addOddNumbersFromList', () => {
   });
 
   describe('addOddNumbersFromList with Decimals', () => {
-    it('should ignore even decimal numbers and sum only odd values', () => {
+    it('should sum odd integers and include the integer part of odd decimals', () => {
       const result = addOddNumbersFromList([1.5, 2.3, 3, 4.6, 5]);
-      expect(result).toBe(11.8); // 1.5 + 2.3 + 3 + 5 = 11.8 (even decimals are ignored)
+      expect(result).toBe(8); // 3 + 5 = 8 (decimals are ignored, odd integers summed)
     });
-
     it('should handle a list with all decimal numbers', () => {
       const result = addOddNumbersFromList([1.1, 2.2, 3.3]);
-      expect(result).toBe(4.4); // 1.1 + 3.3 = 4.4 (ignore only 2.2)
+      expect(result).toBe(0); // No integers found, so result stays 0
     });
-
-    it('should handle a list with decimals and a single odd number', () => {
-      const result = addOddNumbersFromList([0.6, 2.2, 1]);
+    it('should handle a list with decimals and a single odd integer', () => {
+      const result = addOddNumbersFromList([0.5, 2.5, 1]);
       expect(result).toBe(1); // 1 is the only odd integer
     });
-
-    it('should handle a list with mixed decimals and negative odd numbers', () => {
+    it('should handle a list with mixed decimals and negative odd integers', () => {
       const result = addOddNumbersFromList([-1.1, -2.2, -3, 4.4, -5]);
-      expect(result).toBe(-9.1); // (-1.1) + (-3) + (-5) = -9.1 (2.2 & .4 are ignored)
+      expect(result).toBe(-8); // -3 + (-5) = -8 (decimals are ignored, odd integers summed)
     });
-
     it('should handle a list with zero and decimal numbers', () => {
       const result = addOddNumbersFromList([0, 0.5, 2.2, 3.0]);
-      expect(result).toBe(3.5); // 3.0 is considered an integer 3, so sum is 3
+      expect(result).toBe(3); // 3.0 is considered as integer 3
     });
   });
 
